@@ -9,7 +9,7 @@ import 'package:onesignal_flutter/onesignal_flutter.dart';
 class Constant {
   // URL API
   static String URL_BSSCONFIGAPI =
-      "http://150.95.88.227:1150/customerconfig/custapp/GS2016TP";
+      "http://150.95.88.227:1150/customerconfig/custapp/GS2020WTN";
   // static String URL_API = "";
 
   static String OneSignalAppId = "9bc5fd41-90f2-4d65-a54d-c43dcaae9408";
