@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_icons/flutter_icons.dart';
+import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 import 'package:gswattanaapp/bloc/timeline/timeline_bloc.dart';
 import 'package:gswattanaapp/bloc/timeline/timeline_event.dart';
 import 'package:gswattanaapp/bloc/timeline/timeline_state.dart';
@@ -134,7 +136,7 @@ class _TimeLinePageState extends State<TimeLinePage> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/bg-home-1.png"),
+          image: AssetImage("assets/images/bg-home.png"),
           fit: BoxFit.fill,
         ),
       ),
@@ -158,11 +160,11 @@ class _TimeLinePageState extends State<TimeLinePage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 125),
+                        padding: const EdgeInsets.only(left: 115),
                         child: Container(
                           margin: const EdgeInsets.only(top: 15),
-                          width: 110,
-                          height: 110,
+                          width: 120,
+                          height: 120,
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage("assets/images/logo.png"))),
@@ -192,12 +194,12 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                                   15,
                                                 )),
                                                 border: Border.all(
-                                                    color: Colors.white)),
+                                                    color: Color(0xFFf0e19b))),
                                             child: Constant.CountUnreadNoti == 0
                                                 ? IconButton(
                                                     icon: Icon(
                                                       Icons.notifications,
-                                                      color: Colors.white
+                                                      color: Color(0xFFf0e19b),
                                                       //color: Constant.PRIMARY_COLOR,
                                                     ),
                                                     onPressed: () {
@@ -220,7 +222,7 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                                               .toString(),
                                                           style: TextStyle(
                                                               color: Color(
-                                                                  0xFFFFFFFF),
+                                                                  0xFFf0e19b),
                                                               //color: Constant.PRIMARY_COLOR,
                                                               fontWeight:
                                                                   FontWeight
@@ -228,7 +230,7 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                                       child: Icon(
                                                         Icons.notifications,
                                                         color:
-                                                            Color(0xFFFFFFFF),
+                                                            Color(0xFFf0e19b),
                                                         //color: Constant.PRIMARY_COLOR,
                                                       ),
                                                     ),
@@ -290,11 +292,11 @@ class _TimeLinePageState extends State<TimeLinePage> {
                                       15,
                                     )),
                                     border:
-                                        Border.all(color:Colors.white)),
+                                        Border.all(color: Color(0xFFf0e19b))),
                                 child: IconButton(
                                     icon: Icon(
                                       Icons.search,
-                                      color: Colors.white,
+                                      color: Color(0xFFf0e19b),
                                     ),
                                     onPressed: () {
                                       Navigator.push(
@@ -315,50 +317,8 @@ class _TimeLinePageState extends State<TimeLinePage> {
                     height: 5,
                   ),
                   Container(
-                      decoration: BoxDecoration(
-                          //color: Color(0xFFe7b971),
-                          color: Constant.PRIMARY_COLOR,
-                          borderRadius: BorderRadius.all(Radius.circular(
-                            15,
-                          )),
-                          border: Border.all(color: Colors.white)),
-                      width: MediaQuery.of(context).size.width * 0.65,
-                      height: MediaQuery.of(context).size.width * 0.1,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "ราคาทองคำแท่ง",
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              //color: Colors.blueGrey,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Text(
-                            DateFormat('dd/MM/yyyy').format(DateTime.now()),
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              //color: Colors.blueGrey,
-                            ),
-                          ),
-                        ],
-                      )),
-                  Container(
-                    decoration: BoxDecoration(
-                        // gradient: LinearGradient(
-                        //   colors: [
-                        //     Color(0xFF925f26),
-                        //     Color(0xFFe6ba57),
-                        //   ],
-                        // ),
-                        borderRadius: BorderRadius.circular(10)),
                     width: MediaQuery.of(context).size.width * 1,
-                    height: MediaQuery.of(context).size.width * 0.5,
+                    height: MediaQuery.of(context).size.width * 0.33,
                     child: FutureBuilder(
                         future: fetchGoldPrice(),
                         builder: (context, snapshot) {
@@ -367,132 +327,229 @@ class _TimeLinePageState extends State<TimeLinePage> {
                               return Column(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
+                                  Container(
+                                      decoration: BoxDecoration(
+                                          //color: Color(0xFFe7b971),
+                                          color: Constant.PRIMARY_COLOR,
+                                          borderRadius:
+                                              BorderRadius.all(Radius.circular(
+                                            15,
+                                          )),
+                                          border: Border.all(
+                                              color: Color(0xFFf0e19b))),
+                                      width:
+                                          MediaQuery.of(context).size.width * 1,
+                                      height:
+                                          MediaQuery.of(context).size.width *
+                                              0.1,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            "ราคาทองคำแท่งวันที่ ${Constant.GoldPriceText}",
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              color: Color(0xFFf0e19b),
+                                              //color: Colors.blueGrey,
+                                            ),
+                                          ),
+                                          // SizedBox(
+                                          //   width: 15,
+                                          // ),
+                                          // Text(
+                                          //   DateFormat('dd/MM/yyyy').format(DateTime.now()),
+                                          //   style: TextStyle(
+                                          //     fontSize: 20,
+                                          //     color: Color(0xFFf0e19b),
+                                          //     //color: Colors.blueGrey,
+                                          //   ),
+                                          // ),
+                                        ],
+                                      )),
                                   SizedBox(
                                     height: 10,
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(15)),
-                                    ),
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    padding: EdgeInsets.only(top: 0),
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.only(top: 10),
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.5,
-                                          height: 40,
-                                          decoration: BoxDecoration(
-                                              //color: Color(0xFFe7b971),
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFFf0e19b),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(15)),
+                                      ),
+                                      width: MediaQuery.of(context).size.width *
+                                          0.81,
+                                      height: 80,
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.24,
+                                            child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                int.parse(Constant
+                                                            .GoldPriceUpDown) >
+                                                        0
+                                                    ? Icon(
+                                                        FontAwesome.arrow_up,
+                                                        size: 30,
+                                                        color: Colors.green,
+                                                      )
+                                                    : int.parse(Constant
+                                                                .GoldPriceUpDown) ==
+                                                            0
+                                                        ? Text("")
+                                                        : Icon(
+                                                            FontAwesome
+                                                                .arrow_down,
+                                                            size: 30,
+                                                            color: Colors.red,
+                                                          ),
+                                                int.parse(Constant
+                                                            .GoldPriceUpDown) >
+                                                        0
+                                                    ? Text(
+                                                        " ${Constant.GoldPriceUpDown}",
+                                                        style: TextStyle(
+                                                          fontSize: 30,
+                                                          color: Colors.green,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ))
+                                                    : int.parse(Constant
+                                                                .GoldPriceUpDown) ==
+                                                            0
+                                                        ? Text(
+                                                            " ${Constant.GoldPriceUpDown}",
+                                                            style: TextStyle(
+                                                              fontSize: 30,
+                                                              color:
+                                                                  Colors.blue,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ))
+                                                        : Text(
+                                                            " ${Constant.GoldPriceUpDown}",
+                                                            style: TextStyle(
+                                                              fontSize: 30,
+                                                              color: Colors.red,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            )),
+                                              ],
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Container(
+                                            decoration: BoxDecoration(
                                               color: Constant.PRIMARY_COLOR,
                                               borderRadius: BorderRadius.only(
                                                   topRight: Radius.circular(15),
-                                                  topLeft: Radius.circular(15)),
-                                              border: Border.all(
-                                                  color: Colors.white)),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                "ขายออก",
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
+                                                  bottomRight:
+                                                      Radius.circular(15)),
+                                            ),
+                                            width: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.544,
+                                            height: 80,
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    Container(
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              0.25,
+                                                      child: Text(
+                                                        " ขายออก",
+                                                        style: TextStyle(
+                                                          color:
+                                                              Color(0xFFf0e19b),
+                                                          fontSize: 30,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                        textAlign:
+                                                            TextAlign.right,
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 10,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        Constant.GoldPriceSale,
+                                                        style: TextStyle(
+                                                          color:
+                                                              Color(0xFFf0e19b),
+                                                          fontSize: 30,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Text(
-                                              Constant.GoldPriceSale,
-                                              style: TextStyle(
-                                                //color: Color(0xFFe7b971),
-                                                color: Constant.PRIMARY_COLOR,
-                                                fontSize: 30,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 10,
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius:
-                                          BorderRadius.all(Radius.circular(15)),
-                                    ),
-                                    width:
-                                        MediaQuery.of(context).size.width * 0.5,
-                                    padding: EdgeInsets.only(top: 0),
-                                    child: Column(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.only(top: 10),
-                                          width: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.5,
-                                          height: 40,
-                                          decoration: BoxDecoration(
-                                              //color: Color(0xFFe7b971),
-                                              color: Constant.PRIMARY_COLOR,
-                                              borderRadius: BorderRadius.only(
-                                                  topRight: Radius.circular(15),
-                                                  topLeft: Radius.circular(15)),
-                                              border: Border.all(
-                                                  color: Colors.white)),
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                "รับซื้อ",
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.bold,
+                                                SizedBox(
+                                                  height: 10,
                                                 ),
-                                              ),
-                                            ],
+                                                Row(
+                                                  children: [
+                                                    Container(
+                                                      width:
+                                                          MediaQuery.of(context)
+                                                                  .size
+                                                                  .width *
+                                                              0.25,
+                                                      child: Text(
+                                                        " รับซื้อ",
+                                                        style: TextStyle(
+                                                          color:
+                                                              Color(0xFFf0e19b),
+                                                          fontSize: 30,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                        textAlign:
+                                                            TextAlign.right,
+                                                      ),
+                                                    ),
+                                                    SizedBox(
+                                                      width: 10,
+                                                    ),
+                                                    Container(
+                                                      child: Text(
+                                                        Constant.GoldPriceBuy,
+                                                        style: TextStyle(
+                                                          color:
+                                                              Color(0xFFf0e19b),
+                                                          fontSize: 30,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            Text(
-                                              Constant.GoldPriceBuy,
-                                              style: TextStyle(
-                                                //color: Color(0xFFe7b971),
-                                                color: Constant.PRIMARY_COLOR,
-                                                fontSize: 30,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                        ],
+                                      ))
                                 ],
                               );
                             } else {
@@ -508,7 +565,7 @@ class _TimeLinePageState extends State<TimeLinePage> {
               ),
             ),
           ),
-          toolbarHeight: 370,
+          toolbarHeight: 290,
         ),
         body: BlocProvider(
           create: (BuildContext context) {
@@ -770,7 +827,7 @@ class PostWidget extends StatelessWidget {
             children: <Widget>[
               ListTile(
                 title: Text(post.mobileAppPromotionName,
-                    style: TextStyle(fontSize: 20, color: Color(0xFFFFFFFF))),
+                    style: TextStyle(fontSize: 20, color: Color(0xFFf0e19b))),
 //        ,
 //        style: TextStyle(
 //        fontWeight: FontWeight.bold,
@@ -778,14 +835,14 @@ class PostWidget extends StatelessWidget {
 //        fontSize: 18
 
                 subtitle: Text(post.mobileAppPromotionDetail,
-                    style: TextStyle(fontSize: 16, color: Color(0xFFFFFFFF))),
+                    style: TextStyle(fontSize: 16, color: Color(0xFFf0e19b))),
               ),
               SizedBox(
                 height: 50,
               ),
               Text(
                   "${Constant.formatDate.format(post.mobileAppPromotionDate)}     ",
-                  style: TextStyle(fontSize: 12, color: Color(0xFFFFFFFF))),
+                  style: TextStyle(fontSize: 12, color: Color(0xFFf0e19b))),
 //              Text(post.mobileAppPromotionDetail),
 //   Text(post.mobileAppPromotionDate),
             ]));

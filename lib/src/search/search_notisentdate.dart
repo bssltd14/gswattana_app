@@ -61,7 +61,7 @@ class _SearchNotiSentDatePageState extends State<SearchNotiSentDatePage> {
                     child: Text(
                       "ตั้งแต่วันที่ ${Constant.formatDate.format(Constant.searchNotiDateStart)}",
                       style: TextStyle(
-                          color: Constant.FONT_COLOR,
+                          color: Color(0xFFf0e19b),
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
                     ),
@@ -108,7 +108,7 @@ class _SearchNotiSentDatePageState extends State<SearchNotiSentDatePage> {
                     child: Text(
                       "ถึงวันที่ ${Constant.formatDate.format(Constant.searchNotiDateEnd)}",
                       style: TextStyle(
-                          color: Constant.FONT_COLOR,
+                          color: Color(0xFFf0e19b),
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
                     ),
@@ -155,7 +155,7 @@ class _SearchNotiSentDatePageState extends State<SearchNotiSentDatePage> {
                     child: Text(
                       "ค้นหา",
                       style: TextStyle(
-                          color: Constant.FONT_COLOR,
+                          color: Color(0xFFf0e19b),
                           fontSize: 20.0,
                           fontWeight: FontWeight.bold),
                     ),

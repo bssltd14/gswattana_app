@@ -19,12 +19,12 @@ class _SettingPageState extends State<SettingPage> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/bg-slip-1.png"),
+          image: AssetImage("assets/images/bg-setting.png"),
           fit: BoxFit.fill,
         ),
       ),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0xFFe4e2d9),
         body: SingleChildScrollView(
           child: Container(
             child: Padding(
@@ -78,7 +78,7 @@ class _SettingPageState extends State<SettingPage> {
         height: 20,
       ),
       Text(
-        "ห้างทองเยาวราชเอเชีย",
+        "ห้างทองวัฒนา",
         style: TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 22,
@@ -89,7 +89,7 @@ class _SettingPageState extends State<SettingPage> {
         height: 10,
       ),
       Text(
-        "เวลาเปิด - ปิด 09.00-18.00 น. ",
+        "เวลา เปิด - ปิด 7:30 - 17:30 ปิดวันอาทิตย์",
         style: TextStyle(
           fontSize: 20,
           color: Constant.FONT_COLOR_MENU,
@@ -98,293 +98,184 @@ class _SettingPageState extends State<SettingPage> {
       SizedBox(
         height: 10,
       ),
-      Container(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  _launchWeb();
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      //margin: const EdgeInsets.all(40.0),
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("assets/images/phone.png"))),
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      "ติดต่อเรา กว่า 14 สาขา",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Constant.FONT_COLOR_MENU,
-                      ),
-                    ),
-                  ],
+      InkWell(
+        onTap: () {
+          _launchMap1();
+        },
+        child: Row(
+          children: [
+            Container(
+              //margin: const EdgeInsets.all(40.0),
+              width: 24,
+              height: 24,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/map.png"))),
+            ),
+            // SizedBox(width: 5),
+            Column(
+              children: [
+                Text(
+                  "841/1-2 ถ.สุขาภิบาล ต.มหาชัย",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Constant.FONT_COLOR_MENU,
+                  ),
                 ),
-              ),
-            ],
-          ),
+                SizedBox(height: 10),
+                Text(
+                  "   อ.เมืองสมุทรสาคร จ.สมุทรสาคร",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Constant.FONT_COLOR_MENU,
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
-        decoration: BoxDecoration(
-            //color: Color(0xFFe7b971),
-            color: Colors.black12,
-            borderRadius: BorderRadius.all(Radius.circular(
-              15,
-            )),
-            border: Border.all(color: Color(0xFFFFFFFF))),
-        height: 40,
-        width: 300,
       ),
       SizedBox(
         height: 10,
       ),
-      Container(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  //todo
-                  _launchFacebook();
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      //margin: const EdgeInsets.all(40.0),
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("assets/images/facebook.png"))),
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      "ห้างทองเยาวราชเอเชีย wattana",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Constant.FONT_COLOR_MENU,
-                      ),
-                    ),
-                  ],
-                ),
+      InkWell(
+        onTap: () {
+          _makePhoneCall('tel:034411569');
+        },
+        child: Row(
+          children: [
+            Container(
+              //margin: const EdgeInsets.all(40.0),
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/phone.png"))),
+            ),
+            SizedBox(width: 8),
+            Text(
+              "034-411569",
+              style: TextStyle(
+                fontSize: 20,
+                color: Constant.FONT_COLOR_MENU,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        decoration: BoxDecoration(
-            //color: Color(0xFFe7b971),
-            color: Colors.black12,
-            borderRadius: BorderRadius.all(Radius.circular(
-              15,
-            )),
-            border: Border.all(color: Color(0xFFFFFFFF))),
-        height: 40,
-        width: 300,
       ),
       SizedBox(
         height: 10,
       ),
-      Container(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  //todo
-                  _launchLine();
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      //margin: const EdgeInsets.all(40.0),
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("assets/images/line.png"))),
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      "@wattana",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Constant.FONT_COLOR_MENU,
-                      ),
-                    ),
-                  ],
-                ),
+      InkWell(
+        onTap: () {
+          //todo
+          _launchFacebook();
+        },
+        child: Row(
+          children: [
+            Container(
+              //margin: const EdgeInsets.all(40.0),
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/facebook.png"))),
+            ),
+            SizedBox(width: 10),
+            Text(
+              "ห้างทองวัฒนา",
+              style: TextStyle(
+                fontSize: 20,
+                color: Constant.FONT_COLOR_MENU,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        decoration: BoxDecoration(
-            //color: Color(0xFFe7b971),
-            color: Colors.black12,
-            borderRadius: BorderRadius.all(Radius.circular(
-              15,
-            )),
-            border: Border.all(color: Color(0xFFFFFFFF))),
-        height: 40,
-        width: 300,
       ),
       SizedBox(
         height: 10,
       ),
-      Container(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  _launchInstagram();
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      //margin: const EdgeInsets.all(40.0),
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image:
-                                  AssetImage("assets/images/instagram.png"))),
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      "wattanath",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Constant.FONT_COLOR_MENU,
-                      ),
-                    ),
-                  ],
-                ),
+      InkWell(
+        onTap: () {
+          //todo
+          _launchLine();
+        },
+        child: Row(
+          children: [
+            Container(
+              //margin: const EdgeInsets.all(40.0),
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/line.png"))),
+            ),
+            SizedBox(width: 10),
+            Text(
+              "@wattanagold",
+              style: TextStyle(
+                fontSize: 20,
+                color: Constant.FONT_COLOR_MENU,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        decoration: BoxDecoration(
-            //color: Color(0xFFe7b971),
-            color: Colors.black12,
-            borderRadius: BorderRadius.all(Radius.circular(
-              15,
-            )),
-            border: Border.all(color: Color(0xFFFFFFFF))),
-        height: 40,
-        width: 300,
       ),
       SizedBox(
         height: 10,
       ),
-      Container(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  _launchTiktok();
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      //margin: const EdgeInsets.all(40.0),
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("assets/images/tiktok.png"))),
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      "wattanath",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Constant.FONT_COLOR_MENU,
-                      ),
-                    ),
-                  ],
-                ),
+      InkWell(
+        onTap: () {
+          _launchInstagram();
+        },
+        child: Row(
+          children: [
+            Container(
+              //margin: const EdgeInsets.all(40.0),
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/instagram.png"))),
+            ),
+            SizedBox(width: 10),
+            Text(
+              "wattanagold",
+              style: TextStyle(
+                fontSize: 20,
+                color: Constant.FONT_COLOR_MENU,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        decoration: BoxDecoration(
-            //color: Color(0xFFe7b971),
-            color: Colors.black12,
-            borderRadius: BorderRadius.all(Radius.circular(
-              15,
-            )),
-            border: Border.all(color: Color(0xFFFFFFFF))),
-        height: 40,
-        width: 300,
       ),
       SizedBox(
         height: 10,
       ),
-      Container(
-        child: Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              InkWell(
-                onTap: () {
-                  _launchWeb2();
-                },
-                child: Row(
-                  children: [
-                    Container(
-                      //margin: const EdgeInsets.all(40.0),
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage("assets/images/web.png"))),
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      "Website",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Constant.FONT_COLOR_MENU,
-                      ),
-                    ),
-                  ],
-                ),
+      InkWell(
+        onTap: () {
+          _launchTiktok();
+        },
+        child: Row(
+          children: [
+            Container(
+              //margin: const EdgeInsets.all(40.0),
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/tiktok.png"))),
+            ),
+            SizedBox(width: 10),
+            Text(
+              "ห้างทองวัฒนา",
+              style: TextStyle(
+                fontSize: 20,
+                color: Constant.FONT_COLOR_MENU,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        decoration: BoxDecoration(
-            //color: Color(0xFFe7b971),
-            color: Colors.black12,
-            borderRadius: BorderRadius.all(Radius.circular(
-              15,
-            )),
-            border: Border.all(color: Color(0xFFFFFFFF))),
-        height: 40,
-        width: 300,
       ),
       SizedBox(
         height: 10,
@@ -523,13 +414,15 @@ class _SettingPageState extends State<SettingPage> {
   _launchFacebook() async {
     String fbProtocolUrl;
     if (Platform.isIOS) {
-      fbProtocolUrl = "fb://profile/100064680205265";
+      fbProtocolUrl = "fb://profile/100085554589505";
     } else {
-      fbProtocolUrl = "fb://page/100064680205265";
+      fbProtocolUrl =
+          "https://www.facebook.com/wattanagoldmahachai?locale=th_TH";
     }
 
 //    String fallbackUrl = 'https://www.facebook.com/page_name';
-    String fallbackUrl = "https://www.facebook.com/Yaowaratasia?locale=th_TH";
+    String fallbackUrl =
+        "https://www.facebook.com/wattanagoldmahachai?locale=th_TH";
     try {
       bool launched = await launch(fbProtocolUrl, forceSafariVC: false);
 
@@ -546,7 +439,7 @@ class _SettingPageState extends State<SettingPage> {
     //officail account
 //    lineProtocolUrl = "https://line.me/R/oaMessage/${Constant.LINE_ID}/";
 
-    lineProtocolUrl = "https://lin.ee/QvPBKBUA";
+    lineProtocolUrl = "https://lin.ee/Mm5cbkH";
     print(lineProtocolUrl);
 //    String fallbackUrl = 'https://www.line.com/page_name';
 //    String fallbackUrl = "https://www.Line.com/ห้างทองรัตนไชยเยาวราช";
@@ -591,7 +484,7 @@ class _SettingPageState extends State<SettingPage> {
   }
 
   _launchTiktok() async {
-    String tikkokProtocolUrl = "https://www.tiktok.com/@wattanath";
+    String tikkokProtocolUrl = "https://www.tiktok.com/@wattanagold";
 
     if (await canLaunch(tikkokProtocolUrl)) {
       return await launch(tikkokProtocolUrl, forceSafariVC: false);
@@ -612,9 +505,9 @@ class _SettingPageState extends State<SettingPage> {
   _launchMap1() async {
     String lineProtocolUrl;
     if (Platform.isIOS) {
-      lineProtocolUrl = "https://goo.gl/maps/gU2ZUgy1KPYL56JWA";
+      lineProtocolUrl = "https://maps.app.goo.gl/BjPL6E1VRqU95KhC9";
     } else {
-      lineProtocolUrl = "https://goo.gl/maps/gU2ZUgy1KPYL56JWA";
+      lineProtocolUrl = "https://maps.app.goo.gl/BjPL6E1VRqU95KhC9";
     }
 
 //    String fallbackUrl = 'https://www.line.com/page_name';

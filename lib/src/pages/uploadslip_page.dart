@@ -226,7 +226,7 @@ class _UploadSlipPagePageState extends State<UploadSlipPagePage> {
                           child: Text(
                             "เลือกรูป",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -274,7 +274,7 @@ class _UploadSlipPagePageState extends State<UploadSlipPagePage> {
                           child: Text(
                             "ถ่ายรูป",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -349,7 +349,7 @@ class _UploadSlipPagePageState extends State<UploadSlipPagePage> {
                           child: Text(
                             "วันที่โอน ${Constant.formatDate.format(Constant.SelectDate)}",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -424,7 +424,7 @@ class _UploadSlipPagePageState extends State<UploadSlipPagePage> {
                           child: Text(
                             "บันทึกข้อมูล",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),

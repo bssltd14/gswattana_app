@@ -218,7 +218,7 @@ class _SavingPage extends State<SavingPage> {
                                     child: Text("ไม่พบข้อมูลออมทอง",
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Colors.white,
+                                            color: Color(0xFFf0e19b),
                                             fontSize: 18),
                                         textAlign: TextAlign.right),
                                   );

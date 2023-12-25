@@ -285,7 +285,7 @@ class _UploadSlipIntPageState extends State<UploadSlipIntPage> {
                           child: Text(
                             "เลือกรูป",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -333,7 +333,7 @@ class _UploadSlipIntPageState extends State<UploadSlipIntPage> {
                           child: Text(
                             "ถ่ายรูป",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -467,7 +467,7 @@ class _UploadSlipIntPageState extends State<UploadSlipIntPage> {
                           child: Text(
                             "วันที่โอน ${Constant.formatDate.format(Constant.SelectDate)}",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -563,7 +563,7 @@ class _UploadSlipIntPageState extends State<UploadSlipIntPage> {
                           child: Text(
                             "ยืนยันส่งสลิป",
                             style: TextStyle(
-                                color: Colors.white,
+                                color: Color(0xFFf0e19b),
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold),
                           ),

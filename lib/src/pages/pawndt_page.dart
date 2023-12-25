@@ -30,26 +30,29 @@ class _PawnDtPageState extends State<PawnDtPage> {
         ),
         backgroundColor: Colors.white,
       ),
-      body: BlocProvider(
-        create: (BuildContext context) {
-          return PawnDtBloc()
-            ..add(FetchPawnDt(widget.pawnId, widget.branchName));
-        },
-        child: BlocBuilder<PawnDtBloc, PawnDtState>(builder: (context, state) {
-          if (state is PawnDtLoaded) {
-            return _buildPawnDt(state.items, context);
-          }
-          if (state is Failure) {
-            return Column(
-              children: <Widget>[
-                Center(child: Text('Oops something went wrong!')),
-              ],
+      body: Container(
+        color: Color(0xFFe4e2d9),
+        child: BlocProvider(
+          create: (BuildContext context) {
+            return PawnDtBloc()
+              ..add(FetchPawnDt(widget.pawnId, widget.branchName));
+          },
+          child: BlocBuilder<PawnDtBloc, PawnDtState>(builder: (context, state) {
+            if (state is PawnDtLoaded) {
+              return _buildPawnDt(state.items, context);
+            }
+            if (state is Failure) {
+              return Column(
+                children: <Widget>[
+                  Center(child: Text('Oops something went wrong!')),
+                ],
+              );
+            }
+            return Center(
+              child: CircularProgressIndicator(),
             );
-          }
-          return Center(
-            child: CircularProgressIndicator(),
-          );
-        }),
+          }),
+        ),
       ),
     );
   }

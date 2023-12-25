@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     TimeLinePage(),
     SavingMtPage(),
-    PointPage(),
+    // PointPage(),
     PawnPage(),
     SettingPage(),
   ];
@@ -74,11 +74,11 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.monetization_on),
               inactiveColor: Constant.PRIMARY_COLOR,
               activeColor: Constant.PRIMARY_COLOR),
-          BottomNavyBarItem(
-              title: Text('คะแนน'),
-              icon: Icon(Icons.control_point),
-              inactiveColor: Constant.PRIMARY_COLOR,
-              activeColor: Constant.PRIMARY_COLOR),
+          // BottomNavyBarItem(
+          //     title: Text('คะแนน'),
+          //     icon: Icon(Icons.control_point),
+          //     inactiveColor: Constant.PRIMARY_COLOR,
+          //     activeColor: Constant.PRIMARY_COLOR),
           BottomNavyBarItem(
               title: Text('ขายฝาก'),
               icon: Icon(Icons.account_balance),

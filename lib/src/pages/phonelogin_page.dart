@@ -121,7 +121,7 @@ class _PhoneLoginPageState extends State<PhoneLoginPage> {
                                     child: Text(
                                       "เข้าสู่ระบบ",
                                       style: TextStyle(
-                                          color: Color(0xFFFFFFFF),
+                                          color: Color(0xFFf0e19b),
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.bold),
                                     ),

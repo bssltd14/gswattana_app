@@ -25,8 +25,8 @@ class _PawnPage extends State<PawnPage> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/bg-home-1.png"),
-          fit: BoxFit.cover,
+          image: AssetImage("assets/images/bg-home.png"),
+          fit: BoxFit.fill,
         ),
       ),
       child: Scaffold(
@@ -96,7 +96,7 @@ class _PawnPage extends State<PawnPage> {
                 child: Text("ไม่พบข้อมูลขายฝาก",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFFFFFFFF),
+                        color: Color(0xFFf0e19b),
                         fontSize: 18),
                     textAlign: TextAlign.right),
               );
@@ -177,7 +177,7 @@ class ItemTilePawn extends StatelessWidget {
                 ],
               ),
               border: Border.all(
-                  color: Color(0xFFFFFFFF), width: 5, style: BorderStyle.solid),
+                  color: Color(0xFFf0e19b), width: 3, style: BorderStyle.solid),
               borderRadius: BorderRadius.circular(15)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -247,7 +247,7 @@ class ItemTilePawn extends StatelessWidget {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => UploadSlipInt2Page(),
+                          builder: (context) => UploadSlipIntPage(),
                         ));
                   } else {
                     showDialogDueDateOver(context);
@@ -258,10 +258,17 @@ class ItemTilePawn extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      Text(
+                        "ต่อดอกเบี้ย",
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Color(0xFFf0e19b),
+                        ),
+                      ),
                       IconButton(
                         icon: Icon(
                           Icons.add_circle,
-                          color: Colors.white,
+                          color: Color(0xFFf0e19b),
                         ),
                       ),
                     ],
@@ -298,63 +305,63 @@ class ItemTilePawn extends StatelessWidget {
             "สาขาที่ทำรายการ  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "เลขที่  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "สินค้า  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "จำนวนรวม  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "น้ำหนักรวม  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "จำนวนเงิน  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "ระยะเวลา  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "วันที่ฝาก  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "วันที่ครบกำหนด  :",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           SizedBox(height: 5),
@@ -376,7 +383,7 @@ class ItemTilePawn extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Row(
@@ -386,14 +393,14 @@ class ItemTilePawn extends StatelessWidget {
                 "  ${item.pawnId}",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFFFFFFFF),
+                    color: Color(0xFFf0e19b),
                     fontSize: 18),
               ),
               Text(
                 "สถานะ ${item.outStatus}",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Color(0xFFFFFFFF),
+                    color: Color(0xFFf0e19b),
                     fontSize: 16),
               ),
             ],
@@ -403,49 +410,49 @@ class ItemTilePawn extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "  ${Constant.formatNumber.format(item.sumItemQty)} ชิ้น",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "  ${Constant.formatNumber2.format(item.sumItemwt)} กรัม",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "  ${Constant.formatNumber.format(item.amountget)} บาท",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "  ${Constant.formatNumber.format(item.months)} เดือน",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "  ${Constant.formatDate.format(item.inDate)}",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           Text(
             "  ${Constant.formatDate.format(item.duedate)}",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color(0xFFFFFFFF),
+                color: Color(0xFFf0e19b),
                 fontSize: 16),
           ),
           SizedBox(height: 5),

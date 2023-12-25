@@ -137,6 +137,8 @@ class Constant {
   static String GoldPrice = "";
   static String GoldPriceSale = "";
   static String GoldPriceBuy = "";
+  static String GoldPriceText = "";
+  static String GoldPriceUpDown = "";
   static String SavingId = "";
 
   static String MobileAppPaymentBranchName = "";

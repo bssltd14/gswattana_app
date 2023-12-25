@@ -156,7 +156,7 @@ class _PasswordScreenPageState extends State<PasswordScreenPage> {
                                 child: Text(
                                   "ยืนยัน รหัสผ่าน",
                                   style: TextStyle(
-                                      color: Color(0xFFFFFFFF),
+                                      color: Color(0xFFf0e19b),
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold),
                                 ),
